@@ -10,3 +10,6 @@ obj
 /EFCore.BulkExtensions.PostgreSql/*
 /EFCore.BulkExtensions.SQLite/*
 /EFCore.BulkExtensions.SqlServer/*
+.DS_Store
+
+pack/

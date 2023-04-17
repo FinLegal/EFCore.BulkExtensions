@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Title>EFCore.BulkExtensions.SqlServer</Title>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Version>6.6.5</Version>
+     <Version>7.0.0-finlegal.2</Version>
     <Nullable>enable</Nullable>
     <Authors>borisdj</Authors>
     <Description>EntityFramework EF Core Bulk Batch Extensions for Insert Update Delete Read (CRUD) operations on SQL Server</Description>
@@ -28,11 +28,11 @@
   </PropertyGroup>
   
   <ItemGroup>
-	<PackageReference Include="Microsoft.Data.SqlClient" Version="2.1.5" />
-	<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.11" />
-	<PackageReference Include="EntityFrameworkCore.SqlServer.HierarchyId" Version="3.0.1" />
+	<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.5" />
+	<PackageReference Include="EntityFrameworkCore.SqlServer.HierarchyId" Version="4.0.0" />
 	<PackageReference Include="NetTopologySuite.IO.SqlServerBytes" Version="2.1.0" />
-	<PackageReference Include="System.Diagnostics.DiagnosticSource" Version="6.0.0" />
+	<PackageReference Include="System.Diagnostics.DiagnosticSource" Version="7.0.2" />
   </ItemGroup>
 
   <ItemGroup>
