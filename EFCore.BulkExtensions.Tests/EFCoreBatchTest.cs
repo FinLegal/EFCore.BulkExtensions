@@ -400,7 +400,9 @@ WHERE [p].[ParentId] = 1";
             dt.Rows.Add(item.C1, item.C2);
         }
         var parameter = new SqlParameter(parameterName, dt) { SqlDbType = SqlDbType.Structured, TypeName = "dbo.UdttIntInt", };
-        return context.Set<UdttIntInt>().FromSqlRaw($@"select * from {parameterName}", parameter);
+        
+        var sql = $"select * from {parameterName}";
+        return context.Set<UdttIntInt>().FromSqlRaw(sql, parameter);
     }
 
     private static void UpdateSetting(SettingsEnum settings, object value)

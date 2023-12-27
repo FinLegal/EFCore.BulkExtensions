@@ -89,8 +89,9 @@ public class EFCoreBulkTestAsync
             await context.Database.ExecuteSqlRawAsync(createTableSql);
 
             await bulkOperation(context);
-
-            await context.Database.ExecuteSqlRawAsync($"SELECT {columnName} FROM {tableName}");
+            
+            var sql = $"SELECT {columnName} FROM {tableName}";
+            await context.Database.ExecuteSqlRawAsync(sql);
         }
         finally
         {

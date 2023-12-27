@@ -65,8 +65,10 @@ public class EFCoreBatchTestAsync
 
         _ = await testContext.Parents
             .Where(parent => parent.PhoneNumber == oldPhoneNumber)
-            .BatchUpdateAsync(parent => new Parent { PhoneNumber = newPhoneNumber })
-            .ConfigureAwait(false);
+            .BatchUpdateAsync(parent => new Parent
+            {
+                PhoneNumber = newPhoneNumber
+            });
 
         var executedCommand = dbCommandInterceptor.ExecutedNonQueryCommands.Last();
         Assert.Equal(2, executedCommand.DbParameters.Count);

@@ -375,8 +375,8 @@ public class EFCoreBulkTest
             context.Database.ExecuteSqlRaw(createTableSql);
 
             bulkOperation(context);
-
-            context.Database.ExecuteSqlRaw($"SELECT {columnName} FROM {tableName}");
+            var sql = $"SELECT {columnName} FROM {tableName}";
+            context.Database.ExecuteSqlRaw(sql);
         }
         catch (Exception)
         {

@@ -26,7 +26,7 @@ public static class OwnedTypeUtil
 
         foreach (var ot in ownedTables)
         {
-            var isSharingTable = ot.Table.EntityTypeMappings.Any(y => y.EntityType == owner);
+            var isSharingTable = ot.Table.EntityTypeMappings.Any(y => y.TypeBase == owner);
 
             if (isSharingTable == false)
                 return false;
